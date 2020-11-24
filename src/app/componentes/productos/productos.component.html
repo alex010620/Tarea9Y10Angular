@@ -1,0 +1,52 @@
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+  .center{
+    width: 20%;
+    margin: 0 auto;
+    margin-top: 2%;
+
+  }
+</style>
+
+<div class="center">
+<form class="form-signin">
+<div class="text-center mb-4">
+<img class="mb-4" src="../../../assets/shopping-cart.png" alt="" width="72" height="72">
+<h1 class="h3 mb-3 font-weight-normal">Registro Producto</h1>
+</div>
+
+<div class="form-group">
+  <label for="formGroupExampleInput2">Codigo</label>
+  <input type="text" class="form-control" [(ngModel)]="rnc"  name="rnc" id="formGroupxampleInput2" placeholder="Escribe el codigo del Producto...">
+</div>
+<div class="form-group">
+  <label for="formGroupExampleInput2">Nombre</label>
+  <input type="text" class="form-control" [(ngModel)]="nombre" name="nombre" id="forGroupExampleInput2" placeholder="Escribe el nombre...">
+</div>
+<div class="form-group">
+  <label for="formGroupExampleInput2">Precio</label>
+  <input type="text" class="form-control" [(ngModel)]="precio"  name="precio" id="formGroupExamplInput2" placeholder="Precio del Producto...">
+</div>
+<div class="form-group">
+  <label for="formGroupExampleInput2">Cantidad</label>
+  <input type="number" class="form-control" [(ngModel)]="cantidad"  name="cantidad" id="formGroupExampeInput2" placeholder="Escribe la Cantidad...">
+</div>
+<br>
+<button class="btn btn-lg btn-primary btn-block" (click)= "RegistrarProductos()"  type="submit">Registrar Producto</button>
+<br>
+<p class="mt-3 mb-3 text-muted text-center">&copy; YAMC-2020</p>
+</form>
+</div>

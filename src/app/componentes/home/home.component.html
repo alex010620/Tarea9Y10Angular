@@ -1,0 +1,144 @@
+<style>
+  .conten{
+    display: flex;
+  }
+  .div1{
+    width: 35%;
+    height: 400px;
+    margin-right: 30px;
+  }
+  .div2{
+    width: 62%;
+    height: 400px;
+  }
+  .img{
+    margin-left: 13%;
+  }
+  .div2 .n{
+    width: 50%;
+    height: 70px;
+    display: inline-block;
+  }
+
+  .div2 #f{
+    width: 30%;
+    height: 70px;
+  }
+  .div2 .sub1{
+    width: 100%;
+    height: 10%;
+  }
+  .div2 .sub2{
+    width: 100%;
+    height: 90%;
+    overflow: scroll;
+  }
+  .sub2:hover{
+    border-top: 1px solid gray;
+  }
+</style>
+
+<div style="width: 90%; margin: auto; margin-top: 5%;">
+  <table class="table">
+    <thead style="color: white;" class="bg-primary">
+      <tr >
+        <th scope="col">No.Factura</th>
+        <th scope="col">Nombre cliente</th>
+        <th scope="col">Fecha</th>
+        <th scope="col"></th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of prueba">
+        <th scope="row">{{i.idFactura}}</th>
+        <td>{{i.nombre}}</td>
+        <td>{{i.fecha}}</td>
+        <td></td>
+        <td>
+          <button type="button" (click)="openXl(content)" (click)="ver(i.idFactura, i.idCliente)" style=" margin-right: 5px;" class="btn btn-success"><img src="../../../assets/edit.png" width="25" height="25" alt=""></button>
+          <button type="button" (click)="openVerticallyCentered(longContent)" (click)="eliminar(i.nombre, i.idCliente)" class="btn btn-danger"><img src="../../../assets/delete.png" width="25" height="25" alt=""></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Reporte de factura</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="conten">
+    <div class="div1">
+      <label for="">Nombre del cliente</label><br>
+      <input [(ngModel)]="nombre" class="form-control wt-100px" type="text" name="nombre" id="">
+      <br>
+      <label  for="">Telefono</label><br>
+      <input [(ngModel)]="telefono" class="form-control" type="text" name="telefono" id="">
+       <br>
+      <label for="">Fecha de factura</label><br>
+      <input [(ngModel)]="fecha" class="form-control" type="text" name="fecha" id="">
+      <br>
+      <label for="">Descripcion</label><br>
+      <textarea [(ngModel)]="descripcion" style="height: 60px;" class="form-control" name="descripcion" id="" cols="30" rows="10"></textarea>
+    </div>
+    <div class="div2">
+      <div class="sub1">
+        <span style="font-size: 20px;"><b>Productos factuados</b></span>
+        <span style="font-size: 17px;" class="ml-5" ><b>Total pagado:</b></span><span class="ml-1" style="font-size: 18px; color: rgb(0, 132, 255);"><b>RD${{casa.total.toFixed(2)}}</b></span>
+      </div>
+      <div class="sub2">
+        <table class="table">
+          <thead style="color: white;" class="bg-primary">
+            <tr>
+              <th scope="col">Codigo</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Cantidad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let i of productos">
+              <th>{{i.codigo}}</th>
+              <td>{{i.nombre}}</td>
+              <td>{{i.precio}}</td>
+              <td>{{i.cantidad}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="modal-footer">
+    <button  class="btn btn-primary">Guardar e Imprimir</button>
+    <button class="btn btn-warning"><b>Imprimir</b></button>
+    <button class="btn btn-success">Guardar</button>
+    <button type="button" class="btn btn-danger" (click)="modal.close('Close click')">Cerrar</button>
+  </div>
+</ng-template>
+
+<ng-template #longContent let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Eliminar factura</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+     {{mensajeEliminar}}
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-success" (click)="modal.close('Close click')">Cancelar</button>
+    <button type="button" class="btn btn-danger" (click)="eliminarF()">Si</button>
+    <button type="button" class="btn btn-warning" (click)="recargar()" (click)="modal.close('Close click')">Cerrar</button>
+  </div>
+</ng-template>
+
+
+

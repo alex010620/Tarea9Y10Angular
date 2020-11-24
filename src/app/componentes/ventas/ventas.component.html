@@ -1,0 +1,452 @@
+<style>
+
+  .principal{
+    width: 100%;
+    height: 660;
+  display: flex;
+  }
+ .principal .contenedor{
+  width: 60%;
+  margin-left: 5%;
+  border-radius: 5px;
+  border: 1px solid grey;
+  height: 660px;
+}
+
+.contenedor .hijo1{
+  width: 50%;
+  height: 45%;
+}
+.contenedor .hijo2{
+  width: 100%;
+  height: 45%;
+  overflow: scroll;
+}
+.contenedor .hijo3{
+  width: 100%;
+  height: 10%;
+  display: flex;
+}
+.contenedor .subhijo1{
+  width: 50%;
+  float: right;
+  height: 45%;
+}
+select{
+  width: 318px;
+}
+textarea{
+  width: 318px;
+  height: 38px;
+}
+#int{
+  width: 150px;
+}
+.wehdgs{
+  width: 152px;
+  height: 80px;
+  display: inline-block;
+}
+#vc{
+ margin-right: 10px;
+}
+.hijo3 .A{
+width: 220px;
+height: 50px;
+}
+.hijo3 .B{
+  width: 220px;
+height: 50px;
+}
+.hijo3 .C{
+  width: 200px;
+height: 50px;
+}
+.hijo3 .D{
+  width: 220px;
+height: 50px;
+}
+
+
+.contentpdf{
+
+  width: 65%;
+  height: auto;
+ display: none;
+  margin: 0 auto;
+
+}
+.contentpdf .hijopdf1{
+
+  width: 100%;
+  height: 30%;
+}
+.contentpdf .hijopdf2{
+
+  width: 100%;
+  height: 70%;
+}
+.w{
+  width: 20%;
+  height: 80%;
+  display: inline-block;
+
+}
+#v{
+  float: right;
+}
+.principal .conte{
+  width: 25%;
+  margin-top: 3%;
+  margin: auto;
+  border-radius: 5px;
+  border: 1px solid grey;
+  height: 660px;
+
+}
+.conte .n{
+width: 100%;
+height: 6%;
+}
+.conte .x{
+width: 100%;
+height: 94%;
+overflow: scroll;
+}
+
+
+.btn-flotante {
+	font-size: 25px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #ffffff;
+	border-radius: 50%;
+	letter-spacing: 2px;
+  background-color: rgba(0, 128, 0, 0.384);
+  width: 50Px;
+  height: 50px;
+	position: fixed;
+	bottom: 45px;
+	right: 110px;
+  outline:none;
+  border: none;
+	transition: all 300ms ease 0ms;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	z-index: 99;
+}
+.btn-flotante:hover {
+	background-color: green;
+  color: white;
+	box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+	transform: translateY(-7px);
+}
+@media only screen and (max-width: 600px) {
+ 	.conte .btn-flotante {
+		font-size: 14px;
+		padding: 12px 20px;
+		bottom: 20px;
+		right: 20px;
+	}
+}
+@media only screen and (max-width: 1200px) {
+  .principal .contenedor {
+
+    width: 80%;
+    margin-bottom: 50px;
+     height: 900px;
+  }
+  .principal .conte{
+   margin-left: 5%;
+   width: 920px;
+   margin-top: 100px;
+   margin-bottom: 100px;
+ }
+  .contenedor .subhijo1{
+    height: 300px;
+    margin: auto;
+    width: 50%;
+  }
+  .principal{
+    display: table;
+  }
+ #btn1{
+   margin-bottom: 10px;
+ }
+ }
+@media only screen and (max-width: 1000px) {
+  .principal .contenedor {
+    width: 80%;
+    margin-bottom: 50px;
+     height: 900px;
+  }
+  .contenedor .hijo1{
+    display: table-row;
+    margin-left: 10%;
+
+  }
+  .contenedor .subhijo1{
+    float: left;
+    height: 400px;
+    margin: auto;
+    width: 50%;
+  }
+  .principal{
+    display: table;
+  }
+ .principal .conte{
+   margin-left: 5%;
+   width: 820px;
+   margin-bottom: 100px;
+ }
+ #df,#intr,#intd,#h5A{
+   width: 318px;
+ }
+ .contenedor .hijo2{
+   height: 40%;
+ }
+ #btn1{
+   margin-bottom: 10px;
+ }
+ }
+@media only screen and (max-width: 800px) {
+  .principal .contenedor {
+    width: 60%;
+    margin-bottom: 50px;
+     height: 1300px;
+  }
+  .contenedor .hijo1{
+    display: table-row;
+
+    margin-left: 10%;
+
+  }
+  .contenedor .subhijo1{
+    float: left;
+
+    height: 370px;
+    margin: auto;
+    width: 50%;
+  }
+  .principal{
+    display: table;
+  }
+ .principal .conte{
+   margin-left: 5%;
+   width: 620px;
+   margin-bottom: 100px;
+ }
+ #df,#intr,#intd,#h5A{
+   width: 318px;
+ }
+ .contenedor .hijo2{
+   height: 30%;
+ }
+ #btn1{
+   margin-bottom: 10px;
+ }
+ }
+@media only screen and (max-width: 600px) {
+  .principal .contenedor {
+
+    width: 41%;
+    margin-bottom: 50px;
+     height: 1300px;
+  }
+  .contenedor .hijo1{
+    display: table-row;
+  }
+  .contenedor .subhijo1{
+    float: left;
+    height: 370px;
+  }
+  .principal{
+    display: table;
+  }
+ .principal .conte{
+   margin-left: 5%;
+   width: 420px;
+   margin-bottom: 100px;
+ }
+ #df,#intr,#intd,#h5A{
+   width: 318px;
+ }
+ .contenedor .hijo2{
+   height: 30%;
+ }
+ #btn1{
+   margin-bottom: 10px;
+ }
+
+}
+</style>
+<br>
+<div class="principal">
+<div id="hola" class="contenedor">
+  <div class="subhijo1">
+    <div style="width: 75%; margin: auto;">
+    <h5 id="h5A" class="ml-3 mt-2">Datos del cliente</h5>
+    <div id="vc" class="wehdgs">
+      <input type="text" style="display: none;"  [(ngModel)]="ca" (input)="rncCliente($event)" name="ca" id="df">
+      <label  class="ml-3" id="int" for="">RNC</label>
+      <input class="form-control ml-3" [(ngModel)]="rnc"  (input)="rncCliente($event)"  type="text" placeholder="RNC..." name="rnc" id="intr">
+    </div>
+    <div class="wehdgs">
+      <label  class="ml-3"id="int" for="">Fecha</label>
+      <input class="form-control ml-3" [(ngModel)]="fecha" type="text" placeholder="Fecha..." name="fecha" id="intd">
+    </div>
+    <form action="">
+      <label  class="ml-3" id="int" for="">Nombre del cliente</label>
+      <input style="width: 318px;" [(ngModel)]="name" placeholder="Nombre del cliente..." class="form-control ml-3 mb-2 " type="text" name="name" id="dc">
+    <label  class="ml-3"id="int" for="">Descripcion</label>
+    <textarea class="form-control ml-3" [(ngModel)]="descrpcion" placeholder="Descripcion..." name="descrpcion" id="cd" cols="30" rows="10"></textarea>
+  </form>
+  </div>
+</div>
+  <div class="hijo1">
+    <div class="" style="width: 90%; margin: auto;">
+    <h5 class="ml-3 pt-2 ">Datos de la venta</h5>
+    <form action="">
+      <label class="ml-3 pb-1" for="">Codigo del  producto</label>
+     <input style="width: 318px;" [(ngModel)]="codigo" (input)="cargar($event)" placeholder="Codigo del producto..." class="form-control ml-3 " type="text" name="codigo" id="ds">
+    <div id="vc" class="wehdgs">
+      <label  class="ml-3 mt-2" id="in" for="">Nombre</label>
+      <input class="form-control ml-3"  [disabled]="text1" [(ngModel)]="nombre" type="text" placeholder="Nombre..." name="nombre" id="int">
+    </div>
+    <div class="wehdgs">
+      <label  class="ml-3"id="itg" for="">Precio</label>
+      <input class="form-control ml-3" [disabled]="text2" [(ngModel)]="precio" type="number" placeholder="Precio..." name="precio" id="int2">
+    </div><br>
+    <div id="vc" class="wehdgs">
+      <label  class="ml-3" id="nt" for="">Cantidad</label>
+      <input class="form-control ml-3" [(ngModel)]="cantidad" type="number" placeholder="Cantidad..." name="cantidad" id="intw">
+    </div>
+    <div class="wehdgs">
+      <label  class="ml-3"id="it" for="">Cantidad existente</label>
+      <input class="form-control ml-3" [disabled]="text2" [(ngModel)]="cantidax" type="text" placeholder="Cantidad..." name="cantidax" id="int3">
+    </div>
+    <button id="btn1"  type="button" style="display: inline-block;" (click)="guardar()" class="btn btn-success ml-4">Agregar</button>
+  </form>
+</div>
+  </div>
+
+  <div class="hijo2">
+    <table class="table">
+      <thead style="color: white;" class="bg-primary">
+        <tr >
+          <th scope="col">Codigo</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Cantidad</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let i of productos; index as o">
+          <th>{{i.codigo}}</th>
+          <td >{{i.nombre}}</td>
+          <td>RD${{i.precio}}.00</td>
+          <td>{{i.cantidad}}</td>
+          <td>
+            <button type="button" eliminar="{eliminar}" (click)="eliimiinarproducto(i)" class="btn btn-danger"><img src="../../../assets/delete.png" width="25" height="25" alt=""></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="hijo3">
+   <div class="A mt-2 mr-5 ml-5">
+     <label class="mt-2 mr-2" for=""><b>SubTotal:</b></label>
+    <div  style="display: inline; padding-top: 6px;">
+      <label  style="font-size: 20px; color: #007bff;" for=""><b>RD${{subtotal}}.00</b></label>
+    </div>
+   </div>
+   <div class="B mt-2 mr-5">
+    <label class="mt-2 mr-2" for=""><b>ITBIS:</b></label>
+    <label  style="font-size: 20px; color: #007bff;" for=""><b>RD${{itebis2.toFixed(2)}}</b></label>
+   </div>
+   <div class="C mt-2 mr-3">
+    <label class="mt-2 mr-2" for=""><b>Total:</b></label>
+    <label  style="font-size: 20px; color: #007bff;" for=""><b>RD${{total.toFixed(2)}}</b></label>
+   </div>
+   <div class="D mt-2 mr-2">
+    <button type="button" (click)="imprimir('content')"  class="btn btn-success mt-1 mr-3">Facturar</button>
+    <button type="button" class="btn btn-danger mt-1">Cancelar</button>
+   </div>
+  </div>
+</div>
+<div class="conte">
+  <div class="n">
+    <h5 class="ml-2 pt-2 ">Codigo y Nombre de Productos Existentes</h5>
+  </div>
+  <div class="x">
+    <table class="table">
+      <thead style="color: rgb(252, 249, 249);" class="bg-primary">
+        <tr >
+          <th scope="col">Codigo</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Cantidad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="{{colorTabla}}"  *ngFor="let i of df; index as o">
+          <th>{{i.codigo}}</th>
+          <td >{{i.nombre}}</td>
+          <td>{{i.cantidad}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <button (click)="reload()" class="btn-flotante"><i class="fas fa-sync-alt"></i></button>
+
+  </div>
+</div>
+</div>
+<div  class="contentpdf" id="content" #content>
+  <div class="hijopdf1">
+    <br>
+    <div id="v" class="w mt-10">
+     <label for=""><b>Fecha:</b></label><br>
+     <span>
+       {{fecha}}
+     </span>
+    </div>
+    <div class="w ">
+    <img src="../../../assets/yamc.jpeg" width="200" height="200" alt="">
+    </div>
+  <br>
+   <label class="mb-3 ml-5" for=""><b>RNC</b></label><br>
+   <label class="mb-3 ml-5" for="">{{rnc}}</label><br>
+   <label class="mb-3 ml-5" for=""><b>Nombre Cliente</b></label><br>
+   <label class="mb-3 ml-5" for="">{{name}}</label><br>
+   <label class="mb-3 ml-5" for=""><b>Descripcion</b></label><br>
+   <label class="mb-3 ml-5" for="">{{descrpcion}}</label><br>
+    <span class="ml-5"><b>SubTolal:</b> </span>
+    <span style="font-size: 20px; color: #007bff;" class="mr-5"><b>RD${{subtotal}}.00</b></span>
+    <span><b>Itebis:</b> </span>
+    <span style="font-size: 20px; color: #007bff;" class="mr-5"><b>RD${{itebis2.toFixed(2)}}</b></span>
+    <span><b>Total:</b> </span>
+    <span style="font-size: 20px; color: #007bff;"><b>RD${{total.toFixed(2)}}</b></span>
+  </div>
+  <br>
+  <br>
+  <div class="hijopdf2">
+    <table class="table">
+      <thead style="color: black;" class="bg-primary">
+        <tr >
+          <th scope="col">Codigo</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Cantidad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let i of productos; index as o">
+          <th>{{i.codigo}}</th>
+          <td >{{i.nombre}}</td>
+          <td>RD${{i.precio}}.00</td>
+          <td>{{i.cantidad}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
